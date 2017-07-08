@@ -4,6 +4,10 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
+GPIO.setup(red_pin,GPIO.OUT)
+GPIO.setup(green_pin, GPIO.OUT)
+GPIO.setup(blue_pin,GPIO.OUT)
+
 output_pin = 25
 
 red_pin = 18
@@ -18,10 +22,6 @@ pwmGreen.start(100)
 
 pwmBlue = GPIO.PWM(blue_pin, 500)
 pwmBlue.start(100)
-
-GPIO.setup(red_pin,GPIO.IN)
-GPIO.setup(green_pin, GPIO.IN)
-GPIO.setup(blue_pin,GPIO.IN)
 
 class App:
     def __init__(self, master):
