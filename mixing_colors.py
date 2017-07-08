@@ -2,6 +2,8 @@ from Tkinter import *
 import RPi.GPIO as GPIO
 import time
 
+GPIO.setmode(GPIO.BCM)
+
 output_pin = 25
 
 red_pin = 18
@@ -17,7 +19,6 @@ pwmGreen.start(100)
 pwmBlue = GPIO.PWM(blue_pin, 500)
 pwmBlue.start(100)
 
-GPIO.setmode(GPIO.BCM)
 GPIO.setup(red_pin,GPIO.IN)
 GPIO.setup(green_pin, GPIO.IN)
 GPIO.setup(blue_pin,GPIO.IN)
