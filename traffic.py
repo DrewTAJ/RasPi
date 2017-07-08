@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BVM)
+GPIO.setmode(GPIO.BCM)
 
 red_pin = 18
 orange_pin = 23
