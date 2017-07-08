@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BCM)
 control_pin = 18
 GPIO.setup(control_pin, GPIO.OUT)
 
-try 
+try:
     while True:
         GPIO.output(control_pin, False)
         time.sleep(5)
