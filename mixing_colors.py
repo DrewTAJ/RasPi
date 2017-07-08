@@ -2,14 +2,13 @@ from Tkinter import *
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
-
 output_pin = 25
 
 red_pin = 18
 green_pin = 23
 blue_pin = 24
 
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(red_pin,GPIO.OUT)
 GPIO.setup(green_pin, GPIO.OUT)
 GPIO.setup(blue_pin,GPIO.OUT)
