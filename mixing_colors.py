@@ -8,6 +8,15 @@ red_pin = 18
 green_pin = 23
 blue_pin = 24
 
+pwmRed = GPIO.PWM(red_pin, 500)
+pwmRed.start(100)
+
+pwmGreen = GPIO.PWM(green_pin, 500)
+pwmGreen.start(100)
+
+pwmBlue = GPIO.PWM(blue_pin, 500)
+pwmBlue.start(100)
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(red_pin,GPIO.IN)
 GPIO.setup(green_pin, GPIO.IN)
