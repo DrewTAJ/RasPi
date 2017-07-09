@@ -2,8 +2,6 @@ from Tkinter import *
 import RPi.GPIO as GPIO
 import time
 
-output_pin = 25
-
 red_pin = 18
 green_pin = 23
 blue_pin = 24
@@ -34,7 +32,7 @@ class App:
         scaleRed = Scale(frame, from_=0,to=100,orient=HORIZONTAL,command=self.updateRed)
         scaleRed.grid(row=0, column=1)
 
-        scaleGreen = Scale(frame, from_=0, to=100,orient=Horizontal,command=self.updateGreen)
+        scaleGreen = Scale(frame, from_=0, to=100,orient=HORIZONTAL,command=self.updateGreen)
         scaleGreen.grid(row=1,column=1)
         
         scaleBlue = Scale(frame, from_=0, to=100,orient=HORIZONTAL,command=self.updateBlue)
