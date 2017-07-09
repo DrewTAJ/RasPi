@@ -39,13 +39,13 @@ class App:
         scaleBlue.grid(row=2, column=1)
 
     def updateRed(self, duty):
-        pwmRed.ChangeDutyCycle(float(duty))
+        pwmRed.ChangeDutyCycle(float(255 - duty))
 
     def updateGreen(self, duty):
-        pwmGreen.ChangeDutyCycle(float(duty))
+        pwmGreen.ChangeDutyCycle(float(255 - duty))
 
     def updateBlue(self, duty):
-        pwmBlue.ChangeDutyCycle(float(duty))
+        pwmBlue.ChangeDutyCycle(float(255 - duty))
 
 root = Tk()
 root.wm_title('RGB LED Control')
