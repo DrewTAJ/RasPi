@@ -1,5 +1,5 @@
 from Tkinter import *
-import GPIO.RPi as GPIO
+import RPi.GPIO as GPIO
 
 output_pin = 18
 
