@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 
 output_pin = 18
 
-GPIO.setMode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(output_pin,  GPIO.OUT)
 
 
