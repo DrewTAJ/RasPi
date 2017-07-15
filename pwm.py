@@ -20,7 +20,7 @@ class App:
         scalePWM.grid(row=0, column=1)
 
     def updatePWM(self, duty):
-        pwm.ChangeDutyCycle(100 - float(duty))
+        pwm.ChangeDutyCycle(float(duty))
 
 root = Tk()
 root.wm_title('PWM Control')
