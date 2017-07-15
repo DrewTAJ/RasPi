@@ -4,11 +4,10 @@ import RPi.GPIO as GPIO
 output_pin = 18
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(output_pin,  GPIO.OUT)
-
+GPIO.setup(output_pin, GPIO.OUT)
 
 pwm = GPIO.PWM(output_pin, 500)
-pwm.start(0)
+pwm.start(100)
 
 class App:
     def __init__(self, master):
