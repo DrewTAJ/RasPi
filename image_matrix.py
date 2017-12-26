@@ -40,18 +40,18 @@ def drawF():
         draw.line((maxX, maxY - 10, maxX, maxY - 15), fill=1)
         draw.line((maxX, maxY - 15, minX + 10, maxY - 15), fill = 1)
 
-        draw.line((minX + 10, minY - 15, minX + 10, minY + 10), fill=1)
+        draw.line((minX + 10, maxY - 15, minX + 10, minY + 10), fill=1)
 
         draw.line((maxX + 10, minY + 10, maxX, minY + 10), fill=1)
         draw.line((maxX, minY + 10, maxX, minY), fill=1)
         draw.line((maxX, minY, minX + 10, minY), fill=1)
-        draw.line((minX + 10, minY , minX, minY), fill=1)
+        draw.line((minX + 10, minY, minX, minY), fill=1)
 
 drawF()
 
 
 # Then scroll image across matrix...
-for n in range(64 * 2, -32, -1): # Start off top-left, move off bottom-right
+for n in range(64, -32, -1): # Start off top-left, move off bottom-right
         matrix.Clear()
         # IMPORTANT: *MUST* pass image ID, *NOT* image object!
         matrix.SetImage(image.im.id, n, 0)
