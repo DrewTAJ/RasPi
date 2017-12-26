@@ -9,7 +9,7 @@ import time
 from rgbmatrix import Adafruit_RGBmatrix
  
 # Rows and chain length are both required parameters:
-matrix = Adafruit_RGBmatrix(32, 1)
+matrix = Adafruit_RGBmatrix(32, 3)
  
 # Flash screen red, green, blue (packed color values)
 matrix.Fill(0xFF0000)
