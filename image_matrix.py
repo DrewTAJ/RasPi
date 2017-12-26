@@ -27,8 +27,8 @@ draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
 minX = 0
 minY = 0
-maxX = 64
-maxY = 32
+maxX = 31
+maxY = 31
 
 
 def drawF():
