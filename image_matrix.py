@@ -25,8 +25,6 @@ matrix.SetWriteCycles(5)
 image = Image.new("1", (32, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
-
-
 minX = 0
 minY = 0
 maxX = 64
@@ -42,9 +40,9 @@ def drawF():
         draw.line((maxX, maxY - 10, maxX, maxY - 15), fill=1)
         draw.line((maxX, maxY - 15, minX + 10, maxY - 15), fill = 1)
 
-        draw.line((minX + 10, minY + 10, maxX, minY + 10), fill=1)
+        draw.line((minX + 10, minY - 15, minX + 10, minY + 10), fill=1)
 
-        draw.line((maxX, minY, minX + 10, minY), fill=1)
+        draw.line((maxX + 10, minY + 10, maxX, minY + 10), fill=1)
         draw.line((maxX, minY + 10, maxX, minY), fill=1)
         draw.line((maxX, minY, minX + 10, minY), fill=1)
         draw.line((minX + 10, minY , minX, minY), fill=1)
@@ -56,7 +54,7 @@ drawF()
 for n in range(64 * 2, -32, -1): # Start off top-left, move off bottom-right
         matrix.Clear()
         # IMPORTANT: *MUST* pass image ID, *NOT* image object!
-        matrix.SetImage(image.im.id, n, n)
+        matrix.SetImage(image.im.id, n, 0)
         time.sleep(0.05)
 
 matrix.Clear()
