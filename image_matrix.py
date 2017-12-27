@@ -26,41 +26,25 @@ image = Image.new("1", (64 * 10, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
 
-width = 16
-height = 32
-
-minY = 0
-maxY = height
-
-def drawF(minX, maxX):
-
-        
-
-        # draw.line((minX, minY, minX, maxY), fill=1)
-        # draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
-        # draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (height / 4)), fill=1)
-        # draw.line((minX + (width / 4), maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
-        # draw.line((maxX, maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
-        # draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
-        # draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
-        # draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
-        # draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
-        # draw.line((maxX, minY, minX + (width / 4), minY), fill=1)
-        # draw.line((minX + (width / 4), minY, minX, minY), fill=1)
-
-        draw.polygon(
+def drawF(minX, minY, maxX, maxY, width, height, colour):
+        coords = [
                 (minX, minY),
-                (minX, maxY).
-                (minX + (width / 4), maxY),
-                (minX + (width / 4), maxY - (height / 4)),
-                (maxX, maxY - (height / 4)),
-                (minX + (width / 4), maxY - (height / 4)),
-                (minX + (width / 4), minY + (height / 4)),
-                (maxX, minY + (height / 4)),
-                (maxX, minY),
-                (minX + (width / 4),
-                (minX, minY)
-        )
+                (minX, maxY),
+                (minX + 5, maxY),
+                (minX + 5, (minY + (height / 2)) + 5),
+                (maxX, (minY + (height / 2)) + 5),
+                (maxX, minY + (height / 2)),
+                (minX + 5,  minY + (height / 2)),
+                (minX + 5, minY + 5),
+                (maxX, minY + 5),
+                (maxX, minY)
+        ]
+
+        for index, coord in enumerate(coords): 
+                if index == (count(coords) - 1):
+                        draw.line((coords[0], coords[i]), fill=colour)
+                else:
+                        draw.line((coords[i], coords[i + 1]), fill=colour)
 
 def drawU(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
@@ -99,17 +83,23 @@ def drawO(minX, maxX):
         draw.rectangle((minX + (width / 4), minY + (height / 4), maxX - (width / 4), maxY - (height / 4)), fill=0, outline=1)
 
 def drawFuckOff():
+        width = 16
+        height = 32
+
         minX = 0
+        minY = 0
+
         maxX = width
+        maxY = height
 
-        drawF(minX, maxX)
-        drawU(minX + width + 1, maxX + (width * 2) + 1)
-        drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
-        drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
+        drawF(minX, minY, maxX, maxY, width, height, 1)
+        # drawU(minX + width + 1, maxX + (width * 2) + 1)
+        # drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
+        # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
 
-        drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
-        drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
-        drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
+        # drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
+        # drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
+        # drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
 
 drawFuckOff()
 
