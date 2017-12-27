@@ -34,16 +34,16 @@ maxY = height
 
 def drawF(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
-        draw.line((minX, maxY, minX + 10, maxY), fill=1)
-        draw.line((minX + 10, maxY, minX + 10, maxY - 10), fill=1)
-        draw.line((minX + 10, maxY - 10, maxX, maxY - 10), fill=1)
-        draw.line((maxX, maxY - 10, maxX, maxY - 15), fill=1)
-        draw.line((maxX, maxY - 15, minX + 10, maxY - 15), fill = 1)
-        draw.line((minX + 10, maxY - 15, minX + 10, minY + 10), fill=1)
-        draw.line((minX + 10, minY + 10, maxX, minY + 10), fill=1)
-        draw.line((maxX, minY + 10, maxX, minY), fill=1)
-        draw.line((maxX, minY, minX + 10, minY), fill=1)
-        draw.line((minX + 10, minY, minX, minY), fill=1)
+        draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
+        draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (height / 4)), fill=1)
+        draw.line((minX + (width / 4), maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
+        draw.line((maxX, maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
+        draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill = 1)
+        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
+        draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
+        draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
+        draw.line((maxX, minY, minX + (width / 4), minY), fill=1)
+        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
 def drawU(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
