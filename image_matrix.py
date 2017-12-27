@@ -26,27 +26,35 @@ image = Image.new("1", (64 * 10, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
 
-def drawF(minX, minY, maxX, maxY, width, height, colour):
-        coords = [
-                (minX, minY),
-                (minX, maxY),
-                (minX + 5, maxY),
-                (minX + 5, (minY + (height / 2)) + 5),
-                (maxX, (minY + (height / 2)) + 5),
-                (maxX, minY + (height / 2)),
-                (minX + 5,  minY + (height / 2)),
-                (minX + 5, minY + 5),
-                (maxX, minY + 5),
-                (maxX, minY)
-        ]
-
+def drawByCoords(coords):
         for index, coord in enumerate(coords): 
                 if index == (len(coords) - 1):
                         draw.line((coords[0], coords[index]), fill=colour)
                 else:
                         draw.line((coords[index], coords[index + 1]), fill=colour)
 
+def drawF(minX, minY, maxX, maxY, width, height, colour):
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+                (minX + 4, (minY + (height / 2)) + 4),
+                (maxX, (minY + (height / 2)) + 4),
+                (maxX, minY + (height / 2)),
+                (minX + 4,  minY + (height / 4)),
+                (minX + 4, minY + 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+        drawByCoords(coords)
+
 def drawU(minX, maxX):
+        coords = [
+                
+        ]
+
+
+
         draw.line((minX, minY, minX, maxY), fill=1)
         draw.line((minX, maxY, maxX, maxY), fill=1)
         draw.line((maxX, maxY, maxX, minY), fill=1)
@@ -55,6 +63,8 @@ def drawU(minX, maxX):
         draw.line((maxX - (width / 4), maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
         draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY), fill=1)
         draw.line((minX + (width / 4), minY, minX, minY), fill=1)
+
+        drawByCoords(coords)
 
 def drawC(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
