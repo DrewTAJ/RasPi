@@ -22,7 +22,7 @@ matrix = Adafruit_RGBmatrix(32, 3)
 matrix.SetWriteCycles(5)
  
 # Bitmap example w/graphics prims
-image = Image.new("1", (64 * 7, 32)) # Can be larger than matrix if wanted!!
+image = Image.new("1", (64 * 10, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
 
