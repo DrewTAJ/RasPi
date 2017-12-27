@@ -22,33 +22,78 @@ matrix = Adafruit_RGBmatrix(32, 3)
 matrix.SetWriteCycles(5)
  
 # Bitmap example w/graphics prims
-image = Image.new("1", (32, 32)) # Can be larger than matrix if wanted!!
+image = Image.new("1", (64 * 7, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
-minX = 0
+
+width = 16
+height = 32
+
 minY = 0
-maxX = 31
-maxY = 31
+maxY = height
 
-
-def drawF():
+def drawF(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
         draw.line((minX, maxY, minX + 10, maxY), fill=1)
-
         draw.line((minX + 10, maxY, minX + 10, maxY - 10), fill=1)
         draw.line((minX + 10, maxY - 10, maxX, maxY - 10), fill=1)
         draw.line((maxX, maxY - 10, maxX, maxY - 15), fill=1)
         draw.line((maxX, maxY - 15, minX + 10, maxY - 15), fill = 1)
-
         draw.line((minX + 10, maxY - 15, minX + 10, minY + 10), fill=1)
-
         draw.line((minX + 10, minY + 10, maxX, minY + 10), fill=1)
         draw.line((maxX, minY + 10, maxX, minY), fill=1)
         draw.line((maxX, minY, minX + 10, minY), fill=1)
         draw.line((minX + 10, minY, minX, minY), fill=1)
 
-drawF()
+def drawU(minX, maxX):
+        draw.line((minX, minY, minX, maxY), fill=1)
+        draw.line((minX, maxY, maxX, maxY), fill=1)
+        draw.line((maxX, maxY, maxX, minY), fill=1)
+        draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
+        draw.line((maxX - (width / 4), minY, maxX - (width / 4), maxY - (height / 4)), fill=1)
+        draw.line((maxX - (width / 4), maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
+        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY), fill=1)
+        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
+def drawC(minX, maxX):
+        draw.line((minX, minY, minX, maxY), fill=1)
+        draw.line((minX, maxY, maxX, maxY), fill=1)
+        draw.line((maxX, maxY, maxX, maxY - (height / 4)), fill=1)
+        draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
+        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
+        draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
+        draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
+        draw.line((maxX, minY, minX, minY), fill=1)
+
+
+def drawK(minX, maxX):
+        draw.line((minX, minY, minX, maxY), fill=1)
+        draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
+        draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (maxY / 4)), fill=1)
+
+
+        draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
+        draw.line((maxX - (width / 4), minY, minX + (width / 4), minY + (height / 2)), fill=1)
+        draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
+        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
+
+def drawO(minX, maxX):
+        draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=1)
+        draw.rectangle((minX + (width / 4), minY + (height / 4), maxX - (width / 4), maxY - (height / 4)), fill=0, outline=1)
+
+def drawFuckOff():
+        minX = 0
+        maxX = width
+
+        drawF(minX, maxX)
+        drawU(minX + width + 1, maxX + (width * 2) + 1)
+        drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
+        drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
+        drawO(maxX + (width * 4) + 1, maxX + (width * 5) + 1)
+        drawF(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
+        drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
+
+drawFuckOff()
 
 # Then scroll image across matrix...
 for n in range(64 * 2, -32, -1): # Start off top-left, move off bottom-right
