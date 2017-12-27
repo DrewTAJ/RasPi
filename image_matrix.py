@@ -33,17 +33,34 @@ minY = 0
 maxY = height
 
 def drawF(minX, maxX):
-        draw.line((minX, minY, minX, maxY), fill=1)
-        draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
-        draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (height / 4)), fill=1)
-        draw.line((minX + (width / 4), maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
-        draw.line((maxX, maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
-        draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill = 1)
-        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
-        draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
-        draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
-        draw.line((maxX, minY, minX + (width / 4), minY), fill=1)
-        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
+
+        
+
+        # draw.line((minX, minY, minX, maxY), fill=1)
+        # draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
+        # draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (height / 4)), fill=1)
+        # draw.line((minX + (width / 4), maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
+        # draw.line((maxX, maxY - (height / 4), maxX, maxY - (height / 4)), fill=1)
+        # draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
+        # draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
+        # draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
+        # draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
+        # draw.line((maxX, minY, minX + (width / 4), minY), fill=1)
+        # draw.line((minX + (width / 4), minY, minX, minY), fill=1)
+
+        draw.polygon(
+                (minX, minY),
+                (minX, maxY).
+                (minX + (width / 4), maxY),
+                (minX + (width / 4), maxY - (height / 4)),
+                (maxX, maxY - (height / 4)),
+                (minX + (width / 4), maxY - (height / 4)),
+                (minX + (width / 4), minY + (height / 4)),
+                (maxX, minY + (height / 4)),
+                (maxX, minY),
+                (minX + (width / 4),
+                (minX, minY)
+        )
 
 def drawU(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
