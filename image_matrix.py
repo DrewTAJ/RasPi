@@ -41,7 +41,7 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
         ]
 
         for index, coord in enumerate(coords): 
-                if index == (count(coords) - 1):
+                if index == (len(coords) - 1):
                         draw.line((coords[0], coords[i]), fill=colour)
                 else:
                         draw.line((coords[i], coords[i + 1]), fill=colour)
