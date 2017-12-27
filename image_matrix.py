@@ -41,6 +41,7 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
                 (minX + 4, (minY + (height / 2)) + 4),
                 (maxX, (minY + (height / 2)) + 4),
                 (maxX, minY + (height / 2)),
+                (minX + 4, (height / 2)),
                 (minX + 4,  minY + (height / 4)),
                 (minX + 4, minY + 4),
                 (maxX, minY + 4),
