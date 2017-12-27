@@ -68,7 +68,7 @@ def drawC(minX, maxX):
                 (minX, minY),
                 (minX, maxY),
                 (maxX, maxY),
-                (maxX, maxY - (height / 4)).
+                (maxX, maxY - (height / 4)),
                 (minX + (width / 4), maxY - (height / 4)),
                 (minX + (width / 4), minY + (height / 4)),
                 (maxX, minY + (height / 4)),
