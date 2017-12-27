@@ -89,9 +89,10 @@ def drawFuckOff():
         drawU(minX + width + 1, maxX + (width * 2) + 1)
         drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
         drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
-        drawO(maxX + (width * 4) + 1, maxX + (width * 5) + 1)
-        drawF(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
+
+        drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
         drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
+        drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
 
 drawFuckOff()
 
