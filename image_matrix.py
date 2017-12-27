@@ -26,7 +26,7 @@ image = Image.new("1", (64 * 10, 32)) # Can be larger than matrix if wanted!!
 draw  = ImageDraw.Draw(image)    # Declare Draw instance before prims
 # Draw some shapes into image (no immediate effect on matrix)...
 
-def drawByCoords(coords):
+def drawByCoords(coords, colour):
         for index, coord in enumerate(coords): 
                 if index == (len(coords) - 1):
                         draw.line((coords[0], coords[index]), fill=colour)
@@ -46,11 +46,11 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
                 (maxX, minY + 4),
                 (maxX, minY)
         ]
-        drawByCoords(coords)
+        drawByCoords(coords, colour)
 
 def drawU(minX, maxX):
         coords = [
-                
+
         ]
 
 
