@@ -49,34 +49,33 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
-def drawU(minX, maxX):
+def drawU(minX, minY, maxX, maxY, width, height, colour):
         coords = [
-
+                (minX, minY),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, minY),
+                (maxX - 4, minY),
+                (maxX - 4, maxY - 4),
+                (minX + 4, maxY - 4),
+                (minX + 4, minY)
         ]
 
-
-
-        draw.line((minX, minY, minX, maxY), fill=1)
-        draw.line((minX, maxY, maxX, maxY), fill=1)
-        draw.line((maxX, maxY, maxX, minY), fill=1)
-        draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
-        draw.line((maxX - (width / 4), minY, maxX - (width / 4), maxY - (height / 4)), fill=1)
-        draw.line((maxX - (width / 4), maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
-        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY), fill=1)
-        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
-
-        drawByCoords(coords)
+        drawByCoords(coords, colour)
 
 def drawC(minX, maxX):
-        draw.line((minX, minY, minX, maxY), fill=1)
-        draw.line((minX, maxY, maxX, maxY), fill=1)
-        draw.line((maxX, maxY, maxX, maxY - (height / 4)), fill=1)
-        draw.line((maxX, maxY - (height / 4), minX + (width / 4), maxY - (height / 4)), fill=1)
-        draw.line((minX + (width / 4), maxY - (height / 4), minX + (width / 4), minY + (height / 4)), fill=1)
-        draw.line((minX + (width / 4), minY + (height / 4), maxX, minY + (height / 4)), fill=1)
-        draw.line((maxX, minY + (height / 4), maxX, minY), fill=1)
-        draw.line((maxX, minY, minX, minY), fill=1)
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, maxY - (height / 4)).
+                (minX + (width / 4), maxY - (height / 4)),
+                (minX + (width / 4), minY + (height / 4)),
+                (maxX, minY + (height / 4)),
+                (maxX, minY)
+        ]
 
+        drawByCoords(coords)
 
 def drawK(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
@@ -104,7 +103,7 @@ def drawFuckOff():
         maxY = height
 
         drawF(minX, minY, maxX, maxY, width, height, 1)
-        # drawU(minX + width + 1, maxX + (width * 2) + 1)
+        drawU(minX + width + 1, minY, maxX + (width * 2) + 1, maxY, width, height, 1)
         # drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
         # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
 
