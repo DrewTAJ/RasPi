@@ -42,9 +42,9 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
 
         for index, coord in enumerate(coords): 
                 if index == (len(coords) - 1):
-                        draw.line((coords[0], coords[i]), fill=colour)
+                        draw.line((coords[0], coords[index]), fill=colour)
                 else:
-                        draw.line((coords[i], coords[i + 1]), fill=colour)
+                        draw.line((coords[index], coords[index + 1]), fill=colour)
 
 def drawU(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
