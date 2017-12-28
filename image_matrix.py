@@ -41,7 +41,7 @@ def drawA(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (minX + 4, maxY),
                 (minX + 4, minY + (height / 2)),
-                (maxX - 4, minY + (height / 2))
+                (maxX - 4, minY + (height / 2)),
                 (maxX - 4, maxY),
                 (maxX, maxY),
                 (maxX, minY)
