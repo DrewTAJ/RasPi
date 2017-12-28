@@ -75,12 +75,12 @@ def drawB(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
         coords = [
-                (minX + 4, minY + (height / 2) + 3),
+                (minX + 4, minY + (height / 2) + 2),
                 (minX + 4, maxY - 4),
                 (maxX - 8, maxY - 4),
                 (maxX - 4, maxY - 8),
                 (maxX - 4, minY + (height / 2) + 6),
-                (maxX - 8, minY + (height / 2) + 3)
+                (maxX - 8, minY + (height / 2) + 2)
         ]
         drawByCoords(coords, colour)
                         
