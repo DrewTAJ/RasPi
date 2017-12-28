@@ -63,7 +63,7 @@ def drawU(minX, minY, maxX, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-def drawC(minX, maxX):
+def drawC(minX, minY, maxX, maxY, width, height, colour):
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -75,7 +75,7 @@ def drawC(minX, maxX):
                 (maxX, minY)
         ]
 
-        drawByCoords(coords)
+        drawByCoords(coords, colour)
 
 def drawK(minX, maxX):
         draw.line((minX, minY, minX, maxY), fill=1)
@@ -96,6 +96,7 @@ def drawFuckOff():
         width = 15
         height = 32
         spacing = 2
+        word_spacing = 10
 
         minX = 0
         minY = 0
@@ -103,9 +104,9 @@ def drawFuckOff():
         maxX = width
         maxY = height
 
-        drawF(minX, minY, maxX, maxY, width, height, 1)
-        drawU(minX + width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, 1)
-        # drawC(maxX + (width * 2) + 1, maxX + (width * 3) + 1)
+        drawF(minX, minY, maxX, maxY, width, height, "blue")
+        drawU(minX + width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, "blue")
+        drawC(maxX + (width * 2) + 1, minY, maxX + (width * 3) + 1, maxY, width, height, "blue")
         # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
 
         # drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
