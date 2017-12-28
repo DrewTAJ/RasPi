@@ -46,7 +46,7 @@ def drawA(minX, minY, maxY, width, height, colour):
                 (maxX, maxY),
                 (maxX, minY)
         ]
-        draw.rectangle((minX + 4, minY + 4, maxX - 4, minY + 4 + 8), fill=0, outline=colour)
+        draw.rectangle((minX + 4, minY + 4, maxX - 4, minY + 4 + 7), fill=0, outline=colour)
         drawByCoords(coords, colour)
                         
 def drawC(minX, minY, maxY, width, height, colour):
