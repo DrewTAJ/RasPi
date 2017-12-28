@@ -105,8 +105,16 @@ def drawFuckOff():
         maxY = height
 
         drawF(minX, minY, maxX, maxY, width, height, "blue")
-        drawU(minX + width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, "blue")
-        drawC(maxX + (width * 2) + 1, minY, maxX + (width * 3) + 1, maxY, width, height, "blue")
+        drawU(width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, "blue")
+        drawC(
+                (width + spacing) * 2, 
+                minY, 
+                ((width + spacing) * 2) + spacing, 
+                maxY, 
+                width, 
+                height, 
+                "blue"
+        )
         # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
 
         # drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
