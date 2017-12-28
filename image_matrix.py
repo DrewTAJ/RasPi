@@ -124,13 +124,14 @@ def drawFuckOff():
         drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
         drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
-drawFuckOff()
+        
+        # Then scroll image across matrix...
+        for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
+                matrix.Clear()
+                # IMPORTANT: *MUST* pass image ID, *NOT* image object!
+                matrix.SetImage(image.im.id, n, 0)
+                time.sleep(0.05)
 
-# Then scroll image across matrix...
-for n in range(64 * 2, -32, -1): # Start off top-left, move off bottom-right
         matrix.Clear()
-        # IMPORTANT: *MUST* pass image ID, *NOT* image object!
-        matrix.SetImage(image.im.id, n, 0)
-        time.sleep(0.05)
 
-matrix.Clear()
+drawFuckOff()
