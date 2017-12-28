@@ -115,7 +115,7 @@ def drawH(minX, minY, maxY, width, height, colour):
                 (maxX, minY),
                 (maxX - 4, minY),
                 (maxX - 4, (minY + (height / 2)) - 2),
-                (minX - 4, (minY + (height / 2)) - 2),
+                (minX + 4, (minY + (height / 2)) - 2),
                 (minX + 4, minY)
         ]
         drawByCoords(coords, colour)
