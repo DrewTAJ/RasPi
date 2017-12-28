@@ -101,34 +101,34 @@ def drawU(minX, minY, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-# letterMethods = {
-#         "A":drawA,
-#         "B":drawB,
-#         "C":drawC,
-#         "D":drawD,
-#         "E":drawE,
-#         "F":drawF,
-#         "G":drawG,
-#         "H":drawH,
-#         "I":drawI,
-#         "J":drawJ,
-#         "K":drawK,
-#         "L":drawL,
-#         "M":drawM,
-#         "N":drawN,
-#         "O":drawO,
-#         "P":drawP,
-#         "Q":drawQ,
-#         "R":drawR,
-#         "S":drawS,
-#         "T":drawT,
-#         "U":drawU,
-#         "V":drawV,
-#         "W":drawW,
-#         "X":drawX
-#         "Y":drawY,
-#         "Z":drawZ
-# }
+letterMethods = {
+#        "A":drawA,
+#        "B":drawB,
+        "C":drawC,
+#        "D":drawD,
+#        "E":drawE,
+        "F":drawF,
+#        "G":drawG,
+#        "H":drawH,
+#        "I":drawI,
+#        "J":drawJ,
+        "K":drawK,
+#        "L":drawL,
+#        "M":drawM,
+#        "N":drawN,
+        "O":drawO,
+#        "P":drawP,
+#        "Q":drawQ,
+#        "R":drawR,
+#        "S":drawS,
+#        "T":drawT,
+        "U":drawU
+#        "V":drawV,
+#        "W":drawW,
+#        "X":drawX
+#        "Y":drawY,
+#        "Z":drawZ
+}
 
 # def drawLetter(letter, minX, minY, maxY, width, height, colour):
 #         letterMethods[letter](minX, minY, maxY, width, height, colour)
@@ -145,6 +145,11 @@ def drawWord(word):
         maxX = width
         maxY = height
 
+        for letter in word:
+                if letter != "":
+                        if letterMethods[letter]:
+                                letterMethods[letter](minX, minY, maxY, width, height, 1)
+
         # # Then scroll image across matrix...
         # for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
         #         matrix.Clear()
@@ -153,6 +158,16 @@ def drawWord(word):
         #         time.sleep(0.05)
 
         # matrix.Clear()
+
+def drawWords(text):
+
+        words = text.split(" ")
+
+        spacing = 0
+        for word in words:
+                if word != "":
+                        drawWord(word)
+
 
 def drawFuckOff():
         width = 15
@@ -166,16 +181,27 @@ def drawFuckOff():
         maxX = width
         maxY = height
 
-        drawF(minX, minY, maxY, width, height, "blue")
-        drawU(width + spacing, minY, maxY, width, height, "blue")
-        drawC((width + spacing) * 2, minY, maxY, width, height, "blue")
-        drawK((width + spacing) * 3, minY, maxY, width, height, "blue")
+        letterMethod["F"](minX, minY, maxY, width, height, "blue")
+        letterMethod["U"](width + spacing, minY, maxY, width, height, "blue")
+        letterMethod["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
+        letterMethod["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
 
         second_word_start = (((width + spacing) * 3) + width) + word_spacing
 
-        drawO(second_word_start, minY, maxY, width, height, "blue")
-        drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
+        letterMethod["O"](second_word_start, minY, maxY, width, height, "blue")
+        letterMethod["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
+        letterMethod["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
+
+        # drawF(minX, minY, maxY, width, height, "blue")
+        # drawU(width + spacing, minY, maxY, width, height, "blue")
+        # drawC((width + spacing) * 2, minY, maxY, width, height, "blue")
+        # drawK((width + spacing) * 3, minY, maxY, width, height, "blue")
+
+        
+
+        # drawO(second_word_start, minY, maxY, width, height, "blue")
+        # drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
+        # drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
         
         # Then scroll image across matrix...
