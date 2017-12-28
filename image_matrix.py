@@ -139,6 +139,28 @@ def drawH(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawI(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, minY + 4),
+
+                (minX + (width / 2) - 2, minY + 4),
+                (minX + (width / 2) - 2, maxY - 4),
+
+                (minX, maxY - 4),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, maxY - 4),
+
+                (minX + (width / 2) + 2, maxY - 4),
+                (minX + (width / 2) + 2, minY + 4),
+
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawK(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -269,7 +291,7 @@ letterMethods = {
         "F":drawF,
         "G":drawG,
         "H":drawH,
-#        "I":drawI,
+        "I":drawI,
 #        "J":drawJ,
         "K":drawK,
         "L":drawL,
@@ -288,9 +310,6 @@ letterMethods = {
 #        "Y":drawY,
         "Z":drawZ
 }
-
-# def drawLetter(letter, minX, minY, maxY, width, height, colour):
-#         letterMethods[letter](minX, minY, maxY, width, height, colour)
 
 def drawWord(word):
         width = 15
@@ -339,7 +358,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["G"](minX, minY, maxY, width, height, "blue")
+        letterMethods["I"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
