@@ -32,6 +32,22 @@ def drawByCoords(coords, colour):
                         draw.line((coords[0], coords[index]), fill=colour)
                 else:
                         draw.line((coords[index], coords[index + 1]), fill=colour)
+
+def drawA(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+                (minX + 4, minY + (height / 2)),
+                (maxX - 4, minY + (height / 2))
+                (maxX - 4, maxY),
+                (maxX, maxY),
+                (maxX, minY)
+        ]
+        draw.rectangle((minX + 4, minY + 4, maxX - 4, minY + 4 + 4, fill=0, outline=colour)
+        drawByCoords(coords, colour)
                         
 def drawC(minX, minY, maxY, width, height, colour):
         maxX = minX + width
@@ -117,7 +133,7 @@ def drawU(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 letterMethods = {
-#        "A":drawA,
+        "A":drawA,
 #        "B":drawB,
         "C":drawC,
 #        "D":drawD,
@@ -195,17 +211,18 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
+        letterMethods["A"](minX, minY, maxY, width, height, "blue")
 
-        letterMethods["F"](minX, minY, maxY, width, height, "blue")
-        letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
-        letterMethods["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
-        letterMethods["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
+        # letterMethods["F"](minX, minY, maxY, width, height, "blue")
+        # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
+        # letterMethods["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
+        # letterMethods["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
 
         second_word_start = (((width + spacing) * 3) + width) + word_spacing
 
-        letterMethods["O"](second_word_start, minY, maxY, width, height, "blue")
-        letterMethods["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        letterMethods["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
+        # letterMethods["O"](second_word_start, minY, maxY, width, height, "blue")
+        # letterMethods["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
+        # letterMethods["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
         # drawF(minX, minY, maxY, width, height, "blue")
         # drawU(width + spacing, minY, maxY, width, height, "blue")
