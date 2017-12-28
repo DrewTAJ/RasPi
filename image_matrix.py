@@ -194,16 +194,18 @@ def drawFuckOff():
         maxX = width
         maxY = height
 
-        letterMethods["F"](minX, minY, maxY, width, height, "blue")
-        letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
-        letterMethods["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
-        letterMethods["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
+        letterMethods["K"](minX, minY, maxY, width, height, "blue")
 
-        second_word_start = (((width + spacing) * 3) + width) + word_spacing
+        # letterMethods["F"](minX, minY, maxY, width, height, "blue")
+        # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
+        # letterMethods["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
+        # letterMethods["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
 
-        letterMethods["O"](second_word_start, minY, maxY, width, height, "blue")
-        letterMethods["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        letterMethods["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
+        # second_word_start = (((width + spacing) * 3) + width) + word_spacing
+
+        # letterMethods["O"](second_word_start, minY, maxY, width, height, "blue")
+        # letterMethods["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
+        # letterMethods["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
         # drawF(minX, minY, maxY, width, height, "blue")
         # drawU(width + spacing, minY, maxY, width, height, "blue")
