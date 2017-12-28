@@ -166,6 +166,20 @@ def drawO(minX, minY, maxY, width, height, colour):
         draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=colour)
         draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
 
+def drawT(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, minY + 4),
+                (minX + (width / 2) - 1, minY + 4),
+                (minX + (width / 2) - 1, maxY),
+                (minX + (width / 2) + 2, maxY),
+                (minX + (width / 2) + 2, minY + 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawU(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
@@ -202,7 +216,7 @@ letterMethods = {
 #        "Q":drawQ,
 #        "R":drawR,
 #        "S":drawS,
-#        "T":drawT,
+        "T":drawT,
         "U":drawU
 #        "V":drawV,
 #        "W":drawW,
@@ -261,7 +275,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["L"](minX, minY, maxY, width, height, "blue")
+        letterMethods["T"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
