@@ -338,8 +338,8 @@ def drawR(minX, minY, maxY, width, height, colour):
 
         coords = [
                 (minX + 4, minY + 4),
-                (minX + 4, (minY + (height / 2) - 2) - 4),
-                (maxX - 8, (minY + (height / 2) - 2) - 4),
+                (minX + 4, (minY + (height / 2) - 2) - 3),
+                (maxX - 8, (minY + (height / 2) - 2) - 3),
                 (maxX - 8, minY + 4),
                 (maxX - 4, minY + 8)
         ]
