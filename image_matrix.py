@@ -125,7 +125,7 @@ def drawFuckOff():
                 width,
                 height,
                 "blue"
-
+        )
         # drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
         # drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
 
