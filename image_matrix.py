@@ -80,10 +80,10 @@ def drawD(minX, minY, maxY, width, height, colour):
         coords = [
                 (minX + 4, minY + 4),
                 (minX + 4, maxY - 4),
-                (maxX - 6, maxY - 4),
+                (maxX - 8, maxY - 4),
                 (maxX - 4, maxY - 8),
                 (maxX - 4, minY + 8),
-                (maxX - 6, minY + 4),
+                (maxX - 8, minY + 4),
         ]
         drawByCoords(coords, colour)
 
