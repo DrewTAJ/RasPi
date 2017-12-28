@@ -266,6 +266,23 @@ def drawU(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawV(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+
+                ((minX + (width / 2)) - 2, maxY),
+
+                ((minX + (width / 2)) + 2, maxY),
+
+                (maxX, minY),
+                (maxX - 4, minY),
+                (minX + (width / 2), maxY - 4),
+                (minX + 4, minY)
+        ]
+        drawByCoords(coords, colour)
+
+
 def drawZ(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -304,7 +321,7 @@ letterMethods = {
         "S":drawS,
         "T":drawT,
         "U":drawU,
-#        "V":drawV,
+        "V":drawV,
 #        "W":drawW,
 #        "X":drawX
 #        "Y":drawY,
@@ -358,7 +375,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["I"](minX, minY, maxY, width, height, "blue")
+        letterMethods["V"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
