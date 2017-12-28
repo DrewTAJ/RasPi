@@ -317,7 +317,8 @@ def drawP(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 def drawR(minX, minY, maxY, width, height, colour):
-        maxX - minX + width
+        maxX = minX + width
+
         coords = [
                 (minX, minY),
                 (minX, maxY),
