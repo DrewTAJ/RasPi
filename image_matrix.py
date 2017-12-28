@@ -171,8 +171,8 @@ def drawT(minX, minY, maxY, width, height, colour):
         coords = [
                 (minX, minY),
                 (minX, minY + 4),
-                (minX + (width / 2) - 1, minY + 4),
-                (minX + (width / 2) - 1, maxY),
+                (minX + (width / 2) - 2, minY + 4),
+                (minX + (width / 2) - 2, maxY),
                 (minX + (width / 2) + 2, maxY),
                 (minX + (width / 2) + 2, minY + 4),
                 (maxX, minY + 4),
