@@ -68,12 +68,18 @@ def drawF(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 def drawK(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
         coords = [
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-                (minX + 4, maxY - 4),
+                (minX + 4, maxY - (height / 2) + 5),
 
+                (maxX - 5, maxY - (height / 2) + 5),
+
+                (maxX - 5, minY + (height / 2)),
+                (minX + 4, minY + (height / 2)),
                 (minX + 4, minY)
         ]
 
@@ -160,9 +166,7 @@ def drawWord(word):
         # matrix.Clear()
 
 def drawWords(text):
-
         words = text.split(" ")
-
         spacing = 0
         for word in words:
                 if word != "":
@@ -203,7 +207,6 @@ def drawFuckOff():
         # drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
         # drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
-        
         # Then scroll image across matrix...
         for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
                 matrix.Clear()
