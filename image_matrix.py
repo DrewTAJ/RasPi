@@ -190,9 +190,7 @@ def drawS(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (maxX, maxY),
                 (maxX, minY + (height / 2) - 2),
-
                 (minX + 4, minY + (height / 2) - 2),
-                
                 (minX + 4, minY + 4),
                 (maxX, minY + 4),
                 (maxX, minY)
@@ -215,7 +213,6 @@ def drawT(minX, minY, maxY, width, height, colour):
 
 def drawU(minX, minY, maxY, width, height, colour):
         maxX = minX + width
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -226,7 +223,22 @@ def drawU(minX, minY, maxY, width, height, colour):
                 (minX + 4, maxY - 4),
                 (minX + 4, minY)
         ]
+        drawByCoords(coords, colour)
 
+def drawZ(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, minY + 4),
+                (maxX - 4, minY + 4),
+                (minX, maxY - 4),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, maxY - 4),
+                (minX + 4, maxY - 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
         drawByCoords(coords, colour)
 
 letterMethods = {
@@ -250,12 +262,12 @@ letterMethods = {
 #        "R":drawR,
         "S":drawS,
         "T":drawT,
-        "U":drawU
+        "U":drawU,
 #        "V":drawV,
 #        "W":drawW,
 #        "X":drawX
 #        "Y":drawY,
-#        "Z":drawZ
+        "Z":drawZ
 }
 
 # def drawLetter(letter, minX, minY, maxY, width, height, colour):
@@ -308,7 +320,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["S"](minX, minY, maxY, width, height, "blue")
+        letterMethods["Z"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
