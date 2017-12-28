@@ -190,7 +190,9 @@ def drawS(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (maxX, maxY),
                 (maxX, minY + (height / 2) - 2),
-                (minX, minY + (height / 2) - 2),
+
+                (minX + 4, minY + (height / 2) - 2),
+                
                 (minX + 4, minY + 4),
                 (maxX, minY + 4),
                 (maxX, minY)
