@@ -130,7 +130,7 @@ def drawFuckOff():
 
         drawO(second_word_start, minY, maxY, width, height, "blue")
         drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        drawF(second_word_start (width + spacing) * 2, minY, maxY, width, height, "blue")
+        drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
 
 drawFuckOff()
 
