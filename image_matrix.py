@@ -67,7 +67,7 @@ def drawU(minX, minY, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-def drawC(minX, minY, maxX, maxY, width, height, colour):
+def drawC(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
         coords = [
@@ -83,16 +83,28 @@ def drawC(minX, minY, maxX, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-def drawK(minX, maxX):
-        draw.line((minX, minY, minX, maxY), fill=1)
-        draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
-        draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (maxY / 4)), fill=1)
+def drawK((minX, minY, maxY, width, height, colour):
 
 
-        draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
-        draw.line((maxX - (width / 4), minY, minX + (width / 4), minY + (height / 2)), fill=1)
-        draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
-        draw.line((minX + (width / 4), minY, minX, minY), fill=1)
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+
+                minX + 4, minY
+        ]
+
+        drawByCoords(coords, colour)
+
+        # draw.line((minX, minY, minX, maxY), fill=1)
+        # draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
+        # draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (maxY / 4)), fill=1)
+
+
+        # draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
+        # draw.line((maxX - (width / 4), minY, minX + (width / 4), minY + (height / 2)), fill=1)
+        # draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
+        # draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
 def drawO(minX, minY, maxY, width, height, colour):
         maxX = minX + width
@@ -114,17 +126,8 @@ def drawFuckOff():
 
         drawF(minX, minY, maxY, width, height, "blue")
         drawU(width + spacing, minY, maxY, width, height, "blue")
-        drawC(
-                (width + spacing) * 2,
-                minY,
-                ((width + spacing) * 2) + width,
-                maxY,
-                width,
-                height,
-                "blue"
-        )
-        # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
-
+        drawC((width + spacing) * 2, minY, maxY, width, height, "blue")
+        drawK((width + spacing) * 3, minY, maxY, width, height, "blue")
 
         second_word_start = (((width + spacing) * 2) + width) + word_spacing
 
