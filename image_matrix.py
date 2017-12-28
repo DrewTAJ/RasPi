@@ -32,6 +32,22 @@ def drawByCoords(coords, colour):
                         draw.line((coords[0], coords[index]), fill=colour)
                 else:
                         draw.line((coords[index], coords[index + 1]), fill=colour)
+                        
+def drawC(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, maxY - 4),
+                (minX + 4, maxY - 4),
+                (minX + 4, minY + 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+
+        drawByCoords(coords, colour)
 
 def drawF(minX, minY, maxY, width, height, colour):
         maxX = minX + width
@@ -51,6 +67,24 @@ def drawF(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawK(minX, minY, maxY, width, height, colour):
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+                (minX + 4, maxY - 4),
+
+                (minX + 4, minY)
+        ]
+
+        drawByCoords(coords, colour)
+
+def drawO(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
+        draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=colour)
+        draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
+
 def drawU(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
@@ -67,39 +101,58 @@ def drawU(minX, minY, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-def drawC(minX, minY, maxY, width, height, colour):
-        maxX = minX + width
+# letterMethods = {
+#         "A":drawA,
+#         "B":drawB,
+#         "C":drawC,
+#         "D":drawD,
+#         "E":drawE,
+#         "F":drawF,
+#         "G":drawG,
+#         "H":drawH,
+#         "I":drawI,
+#         "J":drawJ,
+#         "K":drawK,
+#         "L":drawL,
+#         "M":drawM,
+#         "N":drawN,
+#         "O":drawO,
+#         "P":drawP,
+#         "Q":drawQ,
+#         "R":drawR,
+#         "S":drawS,
+#         "T":drawT,
+#         "U":drawU,
+#         "V":drawV,
+#         "W":drawW,
+#         "X":drawX
+#         "Y":drawY,
+#         "Z":drawZ
+# }
 
-        coords = [
-                (minX, minY),
-                (minX, maxY),
-                (maxX, maxY),
-                (maxX, maxY - 4),
-                (minX + 4, maxY - 4),
-                (minX + 4, minY + 4),
-                (maxX, minY + 4),
-                (maxX, minY)
-        ]
+# def drawLetter(letter, minX, minY, maxY, width, height, colour):
+#         letterMethods[letter](minX, minY, maxY, width, height, colour)
 
-        drawByCoords(coords, colour)
+def drawWord(word):
+        width = 15
+        height = 31
+        spacing = 2
+        word_spacing = 10
 
-def drawK(minX, minY, maxY, width, height, colour):
-        coords = [
-                (minX, minY),
-                (minX, maxY),
-                (minX + 4, maxY),
-                (minX + 4, maxY - 4),
+        minX = 0
+        minY = 0
 
-                (minX + 4, minY)
-        ]
+        maxX = width
+        maxY = height
 
-        drawByCoords(coords, colour)
+        # # Then scroll image across matrix...
+        # for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
+        #         matrix.Clear()
+        #         # IMPORTANT: *MUST* pass image ID, *NOT* image object!
+        #         matrix.SetImage(image.im.id, n, 0)
+        #         time.sleep(0.05)
 
-def drawO(minX, minY, maxY, width, height, colour):
-        maxX = minX + width
-
-        draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=1)
-        draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
+        # matrix.Clear()
 
 def drawFuckOff():
         width = 15
