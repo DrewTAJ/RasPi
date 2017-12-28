@@ -157,7 +157,7 @@ def drawL(minX, minY, maxY, width, height, colour):
                 (maxX, maxY),
                 (maxX, maxY - 4),
                 (minX + 4, maxY - 4),
-                (minX + 4, maxY - 4)
+                (minX + 4, minY)
         ]
         drawByCoords(coords, colour)
 
