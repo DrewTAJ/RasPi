@@ -73,6 +73,7 @@ def drawE(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (maxX, maxY),
                 (maxX, maxY - 4),
+                (minX, + 4, maxX - 4),
 
                 (minX + 4, minY + (height / 2) + 1),
                 (maxX, minY + (height / 2) + 1),
