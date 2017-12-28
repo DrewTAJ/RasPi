@@ -164,12 +164,12 @@ def drawI(minX, minY, maxY, width, height, colour):
 def drawJ(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
-                (minX, minY)
+                (minX, minY),
                 (minX, minY + 4),
                 (minX + (width / 2) - 2, minY + 4),
                 (minX + (width / 2) - 2, maxY - 4),
                 (minX + 4, maxY - 4),
-                (minX + 4, minY + (height / 2) - 2)
+                (minX + 4, minY + (height / 2) - 2),
                 (minX, minY + (height / 2) - 2),
                 (minX, maxY),
                 (minX + (width / 2) + 2, maxY),
