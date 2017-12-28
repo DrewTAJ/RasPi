@@ -85,6 +85,7 @@ def drawD(minX, minY, maxY, width, height, colour):
                 (maxX - 4, minY + 8),
                 (maxX - 8, minY + 4),
         ]
+        drawByCoords(coords, colour)
 
 def drawE(minX, minY, maxY, width, height, colour):
         maxX = minX + width
