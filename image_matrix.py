@@ -102,6 +102,24 @@ def drawF(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawG(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, maxY - (height / 2)),
+                (minX + 8, maxY - (height / 2)),
+                (minX + 8, maxY - (height / 2) + 4),
+                (maxX - 4, maxY - (height / 2)),
+                (maxX -4, maxY - 4),
+                (minX + 4, maxY - 4),
+                (minX + 4, minY + 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawH(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -248,7 +266,7 @@ letterMethods = {
 #        "D":drawD,
         "E":drawE,
         "F":drawF,
-#        "G":drawG,
+        "G":drawG,
         "H":drawH,
 #        "I":drawI,
 #        "J":drawJ,
@@ -320,7 +338,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["Z"](minX, minY, maxY, width, height, "blue")
+        letterMethods["G"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
