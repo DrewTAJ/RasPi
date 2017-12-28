@@ -51,7 +51,7 @@ def drawF(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
-def drawU(minX, minY, maxX, maxY, width, height, colour):
+def drawU(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
         coords = [
