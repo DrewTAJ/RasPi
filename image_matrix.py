@@ -208,13 +208,16 @@ def drawN(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-                (minX + 4, minY + 4),
+
+                (minX + 4, minY + 7),
 
                 (maxX - 4, maxY),
+
                 (maxX, maxY),
                 (maxX, minY),
                 (maxX - 4, minY),
-                (maxX - 4, maxY - 4),
+
+                (maxX - 4, maxY - 7),
 
                 (minX + 4, minY)
         ]
