@@ -117,7 +117,15 @@ def drawFuckOff():
         )
         # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
 
-        # drawO(maxX + (width * 5) + 1, maxX + (width * 6) + 1)
+        drawO(
+                (((width + spacing) * 2) + width) + word_spacing,
+                minY,
+                ((((width + spacing) * 2) + width) + word_spacing) + width,
+                maxY,
+                width,
+                height,
+                "blue"
+
         # drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
         # drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
 
