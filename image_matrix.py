@@ -284,9 +284,12 @@ def drawM(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (minX + 4, maxY),
                 (minX + 4, minY + 4),
+
                 (minX + (width / 2) - 2, minY + 4),
                 (minX + (width / 2) - 2, maxY),
+                (minX + (width / 2) + 2, maxY),
                 (minX + (width / 2) + 2, minY + 4),
+                
                 (maxX - 4, minY + 4),
                 (maxX - 4, maxY),
                 (maxX, maxY),
