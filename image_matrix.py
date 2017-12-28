@@ -285,15 +285,16 @@ def drawM(minX, minY, maxY, width, height, colour):
                 (minX + 4, maxY),
                 (minX + 4, minY + 4),
 
-                (minX + (width / 2) - 2, minY + 4),
                 (minX + (width / 2) - 2, maxY),
                 (minX + (width / 2) + 2, maxY),
-                (minX + (width / 2) + 2, minY + 4),
-                
+
                 (maxX - 4, minY + 4),
                 (maxX - 4, maxY),
                 (maxX, maxY),
-                (maxX, minY)
+                (maxX, minY),
+                (maxX - 4, minY),
+                (minX + (width / 2), maxY - 4),
+                (minX + 4, minY)
         ]
         drawByCoords(coords, colour)
 
