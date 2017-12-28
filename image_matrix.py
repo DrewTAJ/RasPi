@@ -166,6 +166,19 @@ def drawO(minX, minY, maxY, width, height, colour):
         draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=colour)
         draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
 
+def drawP(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+                (minX + 4, minY + (4 * 3)),
+                (maxX, minY + (4 * 3)),
+                (maxX, minY)
+        ]
+        draw.rectangle((minX + 4, minY + 4, maxX - 4, minY + 8), fill=0, outline=colour)
+        drawByCoords(coords, colour)
+
 def drawT(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
