@@ -337,11 +337,12 @@ def drawR(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
         coords = [
-                (minX + 4, minY + 4),
+                (minX + 4, minY + 3),
                 (minX + 4, (minY + (height / 2) - 2) - 3),
                 (maxX - 8, (minY + (height / 2) - 2) - 3),
-                (maxX - 8, minY + 4),
-                (maxX - 4, minY + 8)
+                
+                (maxX - 4, minY + 8),
+                (maxX - 8, minY + 4)
         ]
         drawByCoords(coords, colour)
 
