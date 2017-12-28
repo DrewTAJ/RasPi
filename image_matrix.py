@@ -31,6 +31,7 @@ def drawByCoords(coords, colour):
                 if index == (len(coords) - 1):
                         draw.line((coords[0], coords[index]), fill=colour)
                 else:
+                        print coords[index], coords[index + 1], colour
                         draw.line((coords[index], coords[index + 1]), fill=colour)
 
 def drawA(minX, minY, maxY, width, height, colour):
