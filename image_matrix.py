@@ -33,7 +33,9 @@ def drawByCoords(coords, colour):
                 else:
                         draw.line((coords[index], coords[index + 1]), fill=colour)
 
-def drawF(minX, minY, maxX, maxY, width, height, colour):
+def drawF(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -50,6 +52,8 @@ def drawF(minX, minY, maxX, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 def drawU(minX, minY, maxX, maxY, width, height, colour):
+        maxX = minX + width
+
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -64,6 +68,8 @@ def drawU(minX, minY, maxX, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 def drawC(minX, minY, maxX, maxY, width, height, colour):
+        maxX = minX + width
+
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -88,7 +94,9 @@ def drawK(minX, maxX):
         draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
         draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
-def drawO(minX, minY, maxX, maxY, width, height, colour):
+def drawO(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+
         draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=1)
         draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
 
@@ -104,8 +112,8 @@ def drawFuckOff():
         maxX = width
         maxY = height
 
-        drawF(minX, minY, maxX, maxY, width, height, "blue")
-        drawU(width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, "blue")
+        drawF(minX, minY, maxY, width, height, "blue")
+        drawU(width + spacing, minY, maxY, width, height, "blue")
         drawC(
                 (width + spacing) * 2,
                 minY,
@@ -120,8 +128,8 @@ def drawFuckOff():
 
         second_word_start = (((width + spacing) * 2) + width) + word_spacing
 
-        drawO(second_word_start, minY, second_word_start + width, maxY, width, height, "blue")
-        drawF(second_word_start + width + spacing, minY, (second_word_start + width + spacing) + width, maxY, width, height, "blue")
+        drawO(second_word_start, minY, maxY, width, height, "blue")
+        drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
         # drawF(maxX + (width * 6) + 1, maxX + (width * 7) + 1)
         # drawF(maxX + (width * 7) + 1, maxX + (width * 8) + 1)
 
