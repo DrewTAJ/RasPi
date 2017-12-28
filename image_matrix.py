@@ -74,21 +74,26 @@ def drawK(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
+
                 (minX + 4, maxY - (height / 2) + 2),
                 (maxX - 5, maxY - (height / 2) + 2),
+
+
+                (maxX - 4, maxY - (height / 2) + 4),
                 (maxX - 4, maxY),
                 (maxX, maxY),
                 (maxX, minY + (height / 2) + 4),
+
                 (maxX - 2, minY + (height / 2) + 2),
+
                 (maxX, minY + (height / 2) - 3),
                 (maxX, minY),
                 (maxX - 4, minY),
                 (maxX - 4, minY + (height / 2) - 3),
 
-
-
                 (maxX - 5, minY + (height / 2) - 1),
                 (minX + 4, minY + (height / 2) - 1),
+
                 (minX + 4, minY)
         ]
 
