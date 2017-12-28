@@ -83,7 +83,7 @@ def drawC(minX, minY, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
-def drawK((minX, minY, maxY, width, height, colour):
+def drawK(minX, minY, maxY, width, height, colour):
 
 
         coords = [
