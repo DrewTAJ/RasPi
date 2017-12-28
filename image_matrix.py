@@ -88,9 +88,9 @@ def drawK(minX, maxX):
         draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
         draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
-def drawO(minX, maxX):
+def drawO(minX, minY, maxX, maxY, width, height, colour):
         draw.rectangle((minX, minY, maxX, maxY), fill=0, outline=1)
-        draw.rectangle((minX + (width / 4), minY + (height / 4), maxX - (width / 4), maxY - (height / 4)), fill=0, outline=1)
+        draw.rectangle((minX + 4, minY + 4, maxX - 4, maxY - 4), fill=0, outline=colour)
 
 def drawFuckOff():
         width = 15
