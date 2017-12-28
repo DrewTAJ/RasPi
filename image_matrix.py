@@ -63,6 +63,16 @@ def drawB(minX, minY, maxY, width, height, colour):
                 (maxX - 4, minY)
         ]
         drawByCoords(coords, colour)
+
+        coords = [
+                (minX + 4, minY + 4),
+                (minX + 4, minY + (height / 2) - 4),
+                (maxX - 8, minY + (height / 2) - 4),
+                (maxX - 4, minY + (height / 2) - 4),
+                (maxX - 4, minY + 8),
+                (maxX - 8, minY + 4)
+        ]
+        drawByCoords(coords, colour)
                         
 def drawC(minX, minY, maxY, width, height, colour):
         maxX = minX + width
