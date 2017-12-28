@@ -277,6 +277,23 @@ def drawL(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawM(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (minX + 4, maxY),
+                (minX + 4, minY + 4),
+                (minX + (width / 2) - 2, minY + 4),
+                (minX + (width / 2) - 2, maxY),
+                (minX + (width / 2) + 2, minY + 4),
+                (maxX - 4, minY + 4),
+                (maxX - 4, maxY),
+                (maxX, maxY),
+                (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawN(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -455,7 +472,7 @@ letterMethods = {
         "J":drawJ,
         "K":drawK,
         "L":drawL,
-#        "M":drawM,
+        "M":drawM,
         "N":drawN,
         "O":drawO,
         "P":drawP,
