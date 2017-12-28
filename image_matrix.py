@@ -166,13 +166,15 @@ def drawJ(minX, minY, maxY, width, height, colour):
         coords = [
                 (minX, minY),
                 (minX, minY + 4),
-                (maxX - 4, minY + 4),
-                (maxX - 4, maxY - 4),
-                (minX + 4, maxY - 4),
-                (minX + 4, minY + (height / 2) - 2),
+                (minX + (width / 2) - 1, minY + 4),
+                (minX + (width / 2) - 1, maxY - 4),
+                (minX + 2, maxY - 4),
+                (minX + 2, minY + (height / 2) - 2),
                 (minX, minY + (height / 2) - 2),
                 (minX, maxY),
-                (maxX, maxY),
+                (minX + (width / 2) + 3, maxY),
+                (minX + (width / 2) + 3, minY + 4),
+                (maxX, minY + 4),
                 (maxX, minY)
         ]
         drawByCoords(coords, colour)
