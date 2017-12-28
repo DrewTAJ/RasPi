@@ -102,7 +102,7 @@ def drawO(minX, minY, maxY, width, height, colour):
 
 def drawFuckOff():
         width = 15
-        height = 32
+        height = 31
         spacing = 2
         word_spacing = 10
 
