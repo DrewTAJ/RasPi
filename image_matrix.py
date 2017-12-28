@@ -65,6 +65,18 @@ def drawC(minX, minY, maxY, width, height, colour):
 
         drawByCoords(coords, colour)
 
+def drawD(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (maxX - 4, maxY),
+                (maxX, maxY - 4),
+                (maxX, minY + 4),
+                (maxX - 4, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawE(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
@@ -342,7 +354,7 @@ letterMethods = {
         "A":drawA,
 #        "B":drawB,
         "C":drawC,
-#        "D":drawD,
+        "D":drawD,
         "E":drawE,
         "F":drawF,
         "G":drawG,
@@ -414,7 +426,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["J"](minX, minY, maxY, width, height, "blue")
+        letterMethods["D"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
