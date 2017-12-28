@@ -271,14 +271,14 @@ def drawV(minX, minY, maxY, width, height, colour):
         coords = [
                 (minX, minY),
 
-                ((minX + (width / 2)) - 2, maxY),
+                ((minX + (width / 2)) - 3, maxY),
 
-                ((minX + (width / 2)) + 2, maxY),
+                ((minX + (width / 2)) + 3, maxY),
 
                 (maxX, minY),
-                (maxX - 4, minY),
+                (maxX - 3, minY),
                 (minX + (width / 2), maxY - 4),
-                (minX + 4, minY)
+                (minX + 3, minY)
         ]
         drawByCoords(coords, colour)
 
