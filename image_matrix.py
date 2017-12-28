@@ -161,6 +161,24 @@ def drawI(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawJ(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY)
+                (minX, minY + 4),
+                (minX + (width / 2) - 2, minY + 4),
+                (minX + (width / 2) - 2, maxY - 4),
+                (minX + 4, maxY - 4),
+                (minX + 4, minY + (height / 2) - 2)
+                (minX, minY + (height / 2) - 2),
+                (minX, maxY),
+                (minX + (width / 2) + 2, maxY),
+                (minX + (width / 2) + 2, minY + 4),
+                (maxX, minY + 4),
+                (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawK(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -330,7 +348,7 @@ letterMethods = {
         "G":drawG,
         "H":drawH,
         "I":drawI,
-#        "J":drawJ,
+        "J":drawJ,
         "K":drawK,
         "L":drawL,
 #        "M":drawM,
@@ -396,7 +414,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["N"](minX, minY, maxY, width, height, "blue")
+        letterMethods["J"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
