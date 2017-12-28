@@ -225,7 +225,7 @@ letterMethods = {
 #        "M":drawM,
 #        "N":drawN,
         "O":drawO,
-#        "P":drawP,
+        "P":drawP,
 #        "Q":drawQ,
 #        "R":drawR,
 #        "S":drawS,
@@ -288,7 +288,7 @@ def drawFuckOff():
         maxY = height
 
         # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["T"](minX, minY, maxY, width, height, "blue")
+        letterMethods["P"](minX, minY, maxY, width, height, "blue")
 
         # letterMethods["F"](minX, minY, maxY, width, height, "blue")
         # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
