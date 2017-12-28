@@ -31,7 +31,6 @@ def drawByCoords(coords, colour):
                 if index == (len(coords) - 1):
                         draw.line((coords[0], coords[index]), fill=colour)
                 else:
-                        print coords[index], coords[index + 1], colour
                         draw.line((coords[index], coords[index + 1]), fill=colour)
 
 def drawA(minX, minY, maxY, width, height, colour):
@@ -76,11 +75,11 @@ def drawE(minX, minY, maxY, width, height, colour):
                 (maxX, maxY - 4),
                 (minX + 4, maxY - 4),
 
-                (minX + 4, minY + (height / 2) + 2),
-                (maxX, minY + (height / 2) + 2),
+                (minX + 4, minY + (height / 2) + 3),
+                (maxX, minY + (height / 2) + 3),
 
-                (maxX, minY + (height / 2) - 2),
-                (minX + 4, minY + (height / 2) - 2),
+                (maxX, minY + (height / 2) - 1),
+                (minX + 4, minY + (height / 2) - 1),
 
                 (minX + 4, minY + 4),
                 (maxX, minY + 4),
