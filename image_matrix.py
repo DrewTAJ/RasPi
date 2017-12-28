@@ -107,12 +107,12 @@ def drawFuckOff():
         drawF(minX, minY, maxX, maxY, width, height, "blue")
         drawU(width + spacing, minY, (minX + width + spacing) + width, maxY, width, height, "blue")
         drawC(
-                (width + spacing) * 2, 
-                minY, 
-                ((width + spacing) * 2) + spacing, 
-                maxY, 
-                width, 
-                height, 
+                (width + spacing) * 2,
+                minY,
+                ((width + spacing) * 2) + width,
+                maxY,
+                width,
+                height,
                 "blue"
         )
         # drawK(maxX + (width * 3) + 1, maxX + (width * 4) + 1)
