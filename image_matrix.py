@@ -84,26 +84,16 @@ def drawC(minX, minY, maxY, width, height, colour):
         drawByCoords(coords, colour)
 
 def drawK(minX, minY, maxY, width, height, colour):
-
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
+                (minX + 4, maxY - 4),
+
                 (minX + 4, minY)
         ]
 
         drawByCoords(coords, colour)
-
-        # draw.line((minX, minY, minX, maxY), fill=1)
-        # draw.line((minX, maxY, minX + (width / 4), maxY), fill=1)
-        # draw.line((minX + (width / 4), maxY, minX + (width / 4), maxY - (maxY / 4)), fill=1)
-
-
-        # draw.line((maxX, minY, maxX - (width / 4), minY), fill=1)
-        # draw.line((maxX - (width / 4), minY, minX + (width / 4), minY + (height / 2)), fill=1)
-        # draw.line((minX + (width / 4), minY + (height / 2), minX + (width /4), minY), fill=1)
-        # draw.line((minX + (width / 4), minY, minX, minY), fill=1)
 
 def drawO(minX, minY, maxY, width, height, colour):
         maxX = minX + width
