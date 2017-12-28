@@ -111,7 +111,8 @@ def drawG(minX, minY, maxY, width, height, colour):
                 (maxX, maxY - (height / 2)),
                 (minX + 8, maxY - (height / 2)),
                 (minX + 8, maxY - (height / 2) + 4),
-                (maxX - 4, maxY - (height / 2)),
+                (maxX - 4, maxY - (height / 2) + 4),
+
                 (maxX -4, maxY - 4),
                 (minX + 4, maxY - 4),
                 (minX + 4, minY + 4),
