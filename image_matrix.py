@@ -90,8 +90,7 @@ def drawK(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-
-                minX + 4, minY
+                (minX + 4, minY)
         ]
 
         drawByCoords(coords, colour)
