@@ -531,7 +531,7 @@ def drawWord(word, index, word_starting_x):
 
         for index, letter in enumerate(word):
                 if letter != "":
-                        if letterMethods[letter]:
+                        if letter in letterMethods:
                                 letterMethods[letter](minX, minY, maxY, width, height, 1)
                                 minX += width + spacing
                                 word_length += width
