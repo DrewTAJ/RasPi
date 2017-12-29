@@ -339,6 +339,24 @@ def drawP(minX, minY, maxY, width, height, colour):
         draw.rectangle((minX + 4, minY + 4, maxX - 4, minY + 8), fill=0, outline=colour)
         drawByCoords(coords, colour)
 
+def drawQ(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY - 4),
+                (maxX - 8, maxY - 4),
+                (maxX - 4, maxY),
+                (maxX, maxY),
+                (maxX - 4, maxY - 4),
+                (maxX - 4, minY)
+
+                # (minX + 4, maxY),
+                # (minX + 4, minY + (4 * 3)),
+                # (maxX, minY + (4 * 3)),
+                # (maxX, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawR(minX, minY, maxY, width, height, colour):
         maxX = minX + width
 
@@ -524,7 +542,7 @@ letterMethods = {
         "N":drawN,
         "O":drawO,
         "P":drawP,
-#        "Q":drawQ,
+        "Q":drawQ,
         "R":drawR,
         "S":drawS,
         "T":drawT,
@@ -582,4 +600,4 @@ def drawText(text):
 
         matrix.Clear()
 
-drawText("Fuck Off")
+drawText("q")
