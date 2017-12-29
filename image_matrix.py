@@ -544,7 +544,7 @@ def drawWord(word, index, word_starting_x):
 
         return word_length
 
-def drawText(text):
+def drawText(text, is_repeating):
         text = text.upper()
         words = text.split(" ")
         spacing = 0
@@ -565,4 +565,17 @@ def drawText(text):
 
         matrix.Clear()
 
-drawText("Fuck Off")
+        if is_repeating:
+                drawText(text, is_repeating)
+
+def init():
+        text = raw_input("Input the text you would like to see")
+        should_repeat = raw_input("Should it repeat y/n?")
+        is_repeating = False
+
+        if should_repeat === "y" or should_repeat === "Y":
+                is_repeating = True
+
+        drawText(text, is_repeating)
+
+init()
