@@ -516,7 +516,7 @@ letterMethods = {
         "Z":drawZ
 }
 
-def drawWord(word):
+def drawWord(word, index):
         width = 15
         height = 31
         spacing = 2
@@ -533,21 +533,24 @@ def drawWord(word):
                         if letterMethods[letter]:
                                 letterMethods[letter](minX, minY, maxY, width, height, 1)
 
-        # # Then scroll image across matrix...
-        # for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
-        #         matrix.Clear()
-        #         # IMPORTANT: *MUST* pass image ID, *NOT* image object!
-        #         matrix.SetImage(image.im.id, n, 0)
-        #         time.sleep(0.05)
-
-        # matrix.Clear()
-
-def drawWords(text):
+def drawText(text):
+        text.upper()
         words = text.split(" ")
         spacing = 0
-        for word in words:
+
+        new_word_start = 0
+
+        for index, word in enumerate(words):
                 if word != "":
-                        drawWord(word)
+                        new_word_start = drawWord(word, index)
+
+        for n in range(64 * 2, -new_word_start, -1): # Start off top-left, move off bottom-right
+                matrix.Clear()
+                # IMPORTANT: *MUST* pass image ID, *NOT* image object!
+                matrix.SetImage(image.im.id, n, 0)
+                time.sleep(0.05)
+
+        matrix.Clear()
 
 
 def drawFuckOff():
@@ -596,4 +599,4 @@ def drawFuckOff():
 
         matrix.Clear()
 
-drawFuckOff()
+drawText("Fuck Off")
