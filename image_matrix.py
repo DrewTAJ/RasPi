@@ -534,7 +534,7 @@ def drawWord(word, index):
                                 letterMethods[letter](minX, minY, maxY, width, height, 1)
 
 def drawText(text):
-        text.upper()
+        text = text.upper()
         words = text.split(" ")
         spacing = 0
 
