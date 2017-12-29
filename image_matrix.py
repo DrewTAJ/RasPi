@@ -545,7 +545,6 @@ def drawText(text):
         words = text.split(" ")
         spacing = 0
         word_spacing = 10
-
         new_word_start = 0
 
         for index, word in enumerate(words):
@@ -563,51 +562,4 @@ def drawText(text):
 
         matrix.Clear()
 
-
-def drawFuckOff():
-        width = 15
-        height = 31
-        spacing = 2
-        word_spacing = 10
-
-        minX = 0
-        minY = 0
-
-        maxX = width
-        maxY = height
-
-        # letterMethods["K"](minX, minY, maxY, width, height, "blue")
-        letterMethods["Y"](minX, minY, maxY, width, height, "blue")
-
-        # letterMethods["F"](minX, minY, maxY, width, height, "blue")
-        # letterMethods["U"](width + spacing, minY, maxY, width, height, "blue")
-        # letterMethods["C"]((width + spacing) * 2, minY, maxY, width, height, "blue")
-        # letterMethods["K"]((width + spacing) * 3, minY, maxY, width, height, "blue")
-
-        second_word_start = (((width + spacing) * 3) + width) + word_spacing
-
-        # letterMethods["O"](second_word_start, minY, maxY, width, height, "blue")
-        # letterMethods["F"](second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        # letterMethods["F"](second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
-
-        # drawF(minX, minY, maxY, width, height, "blue")
-        # drawU(width + spacing, minY, maxY, width, height, "blue")
-        # drawC((width + spacing) * 2, minY, maxY, width, height, "blue")
-        # drawK((width + spacing) * 3, minY, maxY, width, height, "blue")
-
-        
-
-        # drawO(second_word_start, minY, maxY, width, height, "blue")
-        # drawF(second_word_start + width + spacing, minY, maxY, width, height, "blue")
-        # drawF(second_word_start + (width + spacing) * 2, minY, maxY, width, height, "blue")
-
-        # Then scroll image across matrix...
-        for n in range(64 * 2, -((second_word_start + (width + spacing) * 2) + width), -1): # Start off top-left, move off bottom-right
-                matrix.Clear()
-                # IMPORTANT: *MUST* pass image ID, *NOT* image object!
-                matrix.SetImage(image.im.id, n, 0)
-                time.sleep(0.05)
-
-        matrix.Clear()
-
-drawText("This is a sign")
+drawText("Drew Johnson")
