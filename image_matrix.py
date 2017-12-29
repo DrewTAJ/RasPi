@@ -438,16 +438,16 @@ def drawW(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (maxX, maxY),
                 (maxX, minY),
-                (maxX - 4, minY),
-                (maxX - 4, maxY - 4),
+                (maxX - 3, minY),
+                (maxX - 3, maxY - 4),
 
-                (minX + (width / 2) + 2, maxY - 4),
-                (minX + (width / 2) + 2, minY + 4),
-                (minX + (width / 2) - 2, minY + 4),
-                (minX + (width / 2) - 2, maxY - 4),
+                (minX + (width / 2) + 1, maxY - 4),
+                (minX + (width / 2) + 1, minY + 4),
+                (minX + (width / 2) - 1, minY + 4),
+                (minX + (width / 2) - 1, maxY - 4),
 
-                (minX + 4, maxY - 4),
-                (minX + 4, minY)
+                (minX + 3, maxY - 4),
+                (minX + 3, minY)
         ]
         drawByCoords(coords, colour)
 
