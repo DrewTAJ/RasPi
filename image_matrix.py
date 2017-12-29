@@ -359,11 +359,11 @@ def drawQ(minX, minY, maxY, width, height, colour):
 
         coords = [
                 (minX + 4, minY + 4),
-                (minX + 4, maxY - 4),
-                (maxX - 12, maxY - 4),
-                (maxX - 10, maxY - 8),
-                (maxX - 8, maxY - 8),
-                (maxX - 4, maxY - 8),
+                (minX + 4, maxY - 8),
+                (maxX - 12, maxY - 8),
+                (maxX - 10, maxY - 10),
+                (maxX - 8, maxY - 10),
+                (maxX - 4, maxY - 10),
                 (maxX - 4, minY + 4)
         ]
         drawByCoords(coords, colour)
