@@ -544,7 +544,7 @@ def drawWord(word, index, word_starting_x):
 
         return word_length
 
-def drawText(text, is_repeating):
+def drawText(text):
         text = text.upper()
         words = text.split(" ")
         spacing = 0
@@ -561,21 +561,23 @@ def drawText(text, is_repeating):
                 matrix.Clear()
                 # IMPORTANT: *MUST* pass image ID, *NOT* image object!
                 matrix.SetImage(image.im.id, n, 0)
-                time.sleep(0.05)
+
+                if n > -new_word_start:
+                        time.sleep(0.05)
 
         matrix.Clear()
 
-        if is_repeating:
-                drawText(text, is_repeating)
+        # if is_repeating:
+        #         drawText(text, is_repeating)
 
 def init():
-        text = raw_input("Input the text you would like to see")
-        should_repeat = raw_input("Should it repeat y/n?")
-        is_repeating = False
+        text = raw_input("Input the text you would like to see     ")
+        # should_repeat = raw_input("Should it repeat y/n?            ")
+        # is_repeating = False
 
-        if should_repeat is "y" or should_repeat is "Y":
-                is_repeating = True
+        # if should_repeat is "y" or should_repeat is "Y":
+        #         is_repeating = True
 
-        drawText(text, is_repeating)
+        drawText(text)
 
 init()
