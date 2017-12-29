@@ -582,4 +582,4 @@ def drawText(text):
 
         matrix.Clear()
 
-drawText("Drew Johnson")
+drawText("Fuck Off")
