@@ -431,6 +431,26 @@ def drawV(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawW(minX, minY, maxY, width, height, colour):
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, maxY),
+                (maxX, maxY),
+                (maxX, minY),
+                (maxX - 4, minY),
+                (maxX - 4, maxY - 4),
+
+                (minX + (width / 2) + 2, maxY - 4),
+                (minX + (width / 2) + 2, minY + 4),
+                (minX + (width / 2) - 2, minY + 4),
+                (minX + (width / 2) - 2, maxY - 4),
+
+                (minX + 4, maxY - 4),
+                (minX + 4, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawX(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
@@ -510,7 +530,7 @@ letterMethods = {
         "T":drawT,
         "U":drawU,
         "V":drawV,
-#        "W":drawW,
+        "W":drawW,
         "X":drawX,
         "Y":drawY,
         "Z":drawZ
