@@ -516,33 +516,43 @@ letterMethods = {
         "Z":drawZ
 }
 
-def drawWord(word, index):
+def drawWord(word, index, word_starting_x):
         width = 15
         height = 31
         spacing = 2
         word_spacing = 10
+        word_length = 0
 
-        minX = 0
+        minX = word_starting_x
         minY = 0
 
         maxX = width
         maxY = height
 
-        for letter in word:
+        for index, letter in enumerate(word):
                 if letter != "":
                         if letterMethods[letter]:
                                 letterMethods[letter](minX, minY, maxY, width, height, 1)
+                                word_length += width
+                                if index < (len(word) - 1):
+                                        word_length += 2
+
+        return word_length
 
 def drawText(text):
         text = text.upper()
         words = text.split(" ")
         spacing = 0
+        word_spacing = 10
 
         new_word_start = 0
 
         for index, word in enumerate(words):
                 if word != "":
-                        new_word_start = drawWord(word, index)
+                        new_word_start += drawWord(word, index, new_word_start)
+
+                if index < (len(words) - 1):
+                        new_word_start += word_spacing
 
         for n in range(64 * 2, -new_word_start, -1): # Start off top-left, move off bottom-right
                 matrix.Clear()
