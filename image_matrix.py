@@ -610,4 +610,4 @@ def drawFuckOff():
 
         matrix.Clear()
 
-drawText("Fuck Off")
+drawText("This is a sign")
