@@ -459,10 +459,13 @@ def drawY(minX, minY, maxY, width, height, colour):
                 (minX + (width / 3), maxY),
                 (minX + ((width / 3) * 2), maxY),
 
+                (minX + ((width / 3) * 2), minY + (height / 2)),
+                (maxX, minY + (height / 2)),
+                (maxX, minY),
+                (minX + ((width / 3) * 2), minY),
                 (minX + ((width / 3) * 2), minY + (height / 4)),
 
-
-                (maxX, minY + (height / 4)),
+                (minX + (width / 3), minY + (height / 4)),
                 (minX + (width / 3), minY)
         ]
         drawByCoords(coords, colour)
