@@ -449,6 +449,27 @@ def drawX(minX, minY, maxY, width, height, colour):
         ]
         drawByCoords(coords, colour)
 
+def drawY(minX, minY, maxY, width, height, colour): 
+        maxX = minX + width
+        coords = [
+                (minX, minY),
+                (minX, minY + (height / 4)),
+                (minX + (width / 2) - 4, minY + (height / 4)),
+
+                (minX + (width / 2) - 4, maxY),
+                (minX + (width / 2) + 4, maxY),
+
+                (minX + (width / 2) + 4, maxY),
+
+                (maxX, minY + (height / 4)),
+                (minX, minY),
+                (maxX - 5, minY),
+                (maxX - 5, minY + (height / 4)),
+                (minX + (width / 2) - 4, minY + (height / 4)),
+                (minX + (width / 2) - 4, minY)
+        ]
+        drawByCoords(coords, colour)
+
 def drawZ(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
