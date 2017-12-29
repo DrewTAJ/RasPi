@@ -573,7 +573,7 @@ def init():
         should_repeat = raw_input("Should it repeat y/n?")
         is_repeating = False
 
-        if should_repeat === "y" or should_repeat === "Y":
+        if should_repeat is "y" or should_repeat is "Y":
                 is_repeating = True
 
         drawText(text, is_repeating)
