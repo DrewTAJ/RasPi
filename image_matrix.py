@@ -35,7 +35,6 @@ def drawByCoords(coords, colour):
 
 def drawA(minX, minY, maxY, width, height, colour):
         maxX = minX + width
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -63,7 +62,6 @@ def drawB(minX, minY, maxY, width, height, colour):
                 (maxX - 4, minY)
         ]
         drawByCoords(coords, colour)
-
         coords = [
                 (minX + 4, minY + 4),
                 (minX + 4, minY + (height / 2) - 2),
@@ -73,7 +71,6 @@ def drawB(minX, minY, maxY, width, height, colour):
                 (maxX - 8, minY + 4)
         ]
         drawByCoords(coords, colour)
-
         coords = [
                 (minX + 4, minY + (height / 2) + 2),
                 (minX + 4, maxY - 4),
@@ -86,7 +83,6 @@ def drawB(minX, minY, maxY, width, height, colour):
                         
 def drawC(minX, minY, maxY, width, height, colour):
         maxX = minX + width
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -97,7 +93,6 @@ def drawC(minX, minY, maxY, width, height, colour):
                 (maxX, minY + 4),
                 (maxX, minY)
         ]
-
         drawByCoords(coords, colour)
 
 def drawD(minX, minY, maxY, width, height, colour):
@@ -111,7 +106,6 @@ def drawD(minX, minY, maxY, width, height, colour):
                 (maxX - 4, minY)
         ]
         drawByCoords(coords, colour)
-
         coords = [
                 (minX + 4, minY + 4),
                 (minX + 4, maxY - 4),
@@ -124,7 +118,6 @@ def drawD(minX, minY, maxY, width, height, colour):
 
 def drawE(minX, minY, maxY, width, height, colour):
         maxX = minX + width
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
@@ -242,25 +235,19 @@ def drawK(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-
                 (minX + 4, maxY - (height / 2) + 2),
                 (maxX - 5, maxY - (height / 2) + 2),
-
                 (maxX - 4, maxY - (height / 2) + 4),
                 (maxX - 4, maxY),
                 (maxX, maxY),
                 (maxX, minY + (height / 2) + 4),
-
                 (maxX - 2, minY + (height / 2) + 1),
-
                 (maxX, minY + (height / 2) - 3),
                 (maxX, minY),
                 (maxX - 4, minY),
                 (maxX - 4, minY + (height / 2) - 4),
-
                 (maxX - 5, minY + (height / 2) - 1),
                 (minX + 4, minY + (height / 2) - 1),
-
                 (minX + 4, minY)
         ]
         drawByCoords(coords, colour)
@@ -284,12 +271,10 @@ def drawM(minX, minY, maxY, width, height, colour):
                 (minX, maxY),
                 (minX + 4, maxY),
                 (minX + 4, minY + 6),
-
                 (minX + (width / 2) - 1, minY + 8),
                 (minX + (width / 2) - 1, maxY),
                 (minX + (width / 2) + 2, maxY),
                 (minX + (width / 2) + 2, minY + 8),
-
                 (maxX - 4, minY + 6),
                 (maxX - 4, maxY),
                 (maxX, maxY),
@@ -306,17 +291,12 @@ def drawN(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-
                 (minX + 4, minY + 12),
-
                 (maxX - 4, maxY),
-
                 (maxX, maxY),
                 (maxX, minY),
                 (maxX - 4, minY),
-
                 (maxX - 4, maxY - 12),
-
                 (minX + 4, minY)
         ]
         drawByCoords(coords, colour)
@@ -345,56 +325,36 @@ def drawQ(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, maxY - 5),
                 (maxX - 6, maxY - 5),
-
                 (maxX - 4, maxY),
                 (maxX, maxY),
-
                 (maxX - 2, maxY - 5),
                 (maxX - 2, minY)
         ]
         drawByCoords(coords, colour)
-
         coords = [
-
                 (minX + 3, minY + 3),
                 (minX + 3, maxY - 7),
                 (maxX - 5, maxY - 7),
                 (maxX - 5, minY + 3)
-
-
-                # (minX + 2, minY + 3),
-                # (minX + 2, maxY - 7),
-                # (maxX - 6, maxY - 7),
-
-
-                # (maxX - 8, maxY - 10),
-                # (maxX - 6, maxY - 10),
-
-                # (maxX - 4, maxY - 10),
-                # (maxX - 4, minY + 3)
         ]
         drawByCoords(coords, colour)
 
 def drawR(minX, minY, maxY, width, height, colour):
         maxX = minX + width
-
         coords = [
                 (minX, minY),
                 (minX, maxY),
                 (minX + 4, maxY),
-
                 (minX + 4, minY + (height / 2)),
                 (maxX - 8, minY + (height / 2)),
                 (maxX - 8, maxY),
                 (maxX - 4, maxY),
                 (maxX - 4, minY + (height / 2)),
-
                 (maxX, minY + (height / 2) - 4),
                 (maxX, minY + 4),
                 (maxX - 4, minY)
         ]
         drawByCoords(coords, colour)
-
         coords = [
                 (minX + 4, minY + 3),
                 (minX + 4, (minY + (height / 2)) - 3),
@@ -455,11 +415,8 @@ def drawV(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
                 (minX, minY),
-
                 ((minX + (width / 2)) - 2, maxY),
-
                 ((minX + (width / 2)) + 2, maxY),
-
                 (maxX, minY),
                 (maxX - 4, minY),
                 (minX + (width / 2), maxY - 4),
@@ -476,12 +433,10 @@ def drawW(minX, minY, maxY, width, height, colour):
                 (maxX, minY),
                 (maxX - 3, minY),
                 (maxX - 3, maxY - 4),
-
                 (minX + (width / 2) + 2, maxY - 4),
                 (minX + (width / 2) + 2, minY + 4),
                 (minX + (width / 2) - 1, minY + 4),
                 (minX + (width / 2) - 1, maxY - 4),
-
                 (minX + 3, maxY - 4),
                 (minX + 3, minY)
         ]
@@ -511,18 +466,14 @@ def drawY(minX, minY, maxY, width, height, colour):
                 (minX, minY),
                 (minX, minY + (height / 2)),
                 (minX + (width / 3), minY + (height / 2)),
-
                 (minX + (width / 3), maxY),
                 (minX + ((width / 3) * 2), maxY),
-
                 (minX + ((width / 3) * 2), minY + (height / 2)),
                 (maxX, minY + (height / 2)),
                 (maxX, minY),
                 (minX + ((width / 3) * 2), minY),
-
                 (minX + ((width / 3) * 2), minY + (height / 3)),
                 (minX + (width / 3), minY + (height / 3)),
-        
                 (minX + (width / 3), minY)
         ]
         drawByCoords(coords, colour)
@@ -578,13 +529,10 @@ def drawWord(word, index, word_starting_x):
         spacing = 2
         word_spacing = 10
         word_length = 0
-
         minX = word_starting_x
         minY = 0
-
         maxX = width
         maxY = height
-
         for index, letter in enumerate(word):
                 if letter != "":
                         if letter in letterMethods:
@@ -606,7 +554,6 @@ def drawText(text):
         for index, word in enumerate(words):
                 if word != "":
                         new_word_start += drawWord(word, index, new_word_start)
-
                 if index < (len(words) - 1):
                         new_word_start += word_spacing
 
@@ -618,4 +565,4 @@ def drawText(text):
 
         matrix.Clear()
 
-drawText("q")
+drawText("Fuck Off")
