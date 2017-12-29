@@ -533,6 +533,7 @@ def drawWord(word, index, word_starting_x):
                 if letter != "":
                         if letterMethods[letter]:
                                 letterMethods[letter](minX, minY, maxY, width, height, 1)
+                                minX += width + spacing
                                 word_length += width
                                 if index < (len(word) - 1):
                                         word_length += 2
