@@ -453,10 +453,10 @@ def drawY(minX, minY, maxY, width, height, colour):
         maxX = minX + width
         coords = [
                 (minX, minY),
-                (minX + (width / 2) - 2, minY + 6),
+                (minX + (width / 2) - 2, minY + (height / 2)),
                 (minX + (width / 2) - 2, maxY),
                 (minX + (width / 2) + 2, maxY),
-                (minX + (width / 2) + 2, minY + 6),
+                (minX + (width / 2) + 2, minY + (height / 2)),
                 (maxX, minY),
                 (maxX - 4, minY),
                 (minX + (width / 2), minY + 6),
